@@ -21,7 +21,7 @@ const Nav = () => {
     <nav className="flex-between w-full mb-16 pt-3">
       <Link href="/" className="flex gap-2 flex-center">
         <Image
-          src={session?.user.image}
+          src="/assets/images/logo.png"
           alt="MealMentor Logo"
           width={30}
           height={30}
@@ -34,7 +34,7 @@ const Nav = () => {
       <div className="sm:flex hidden">
         {session?.user ? (
           <div className="flex gap-3 md:gap-5">
-            <Link href="/create-promt" className="black_btn">
+            <Link href="/create-prompt" className="black_btn">
               Create Post
             </Link>
             <button type="button" onClick={signOut} className="outline_btn">
@@ -44,7 +44,7 @@ const Nav = () => {
               <Image
                 width={37}
                 height={37}
-                src="/assets/images/logo.svg"
+                src={session?.user.image}
                 alt="profile"
                 className="rounded-full"
               />

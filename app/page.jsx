@@ -7,7 +7,7 @@ const Home = () => {
         Discover and Share
         <br className="" />
         <span className="orange_gradient text-center">
-          AI-Powered Meal Based System
+          AI-Powered Diet Plans
         </span>
       </h1>
       <p>MealMentor is an open source AI prompting tool for modern world</p>
