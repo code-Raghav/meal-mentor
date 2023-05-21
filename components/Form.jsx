@@ -20,14 +20,14 @@ const Form = ({ type, setPost, post, submitting, handleSubmit }) => {
             Recipe
           </span>
           <input
-            value={post.prompt}
+            value={post?.prompt}
             onChange={(e) => setPost({ ...post, prompt: e.target.value })}
             placeholder="Write your recipe name here..."
             required
             className="form_input"
           />
           <textarea
-            value={post.tag}
+            value={post?.tag}
             onChange={(e) => setPost({ ...post, tag: e.target.value })}
             placeholder="Write your recipe here..."
             required
