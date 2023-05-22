@@ -52,7 +52,7 @@ To get started with MealMentor, please follow these steps:
   
   ## Technologies Used
 
-- **Frontend:** HTML, CSS, JavaScript
+- **Frontend:** HTML, CSS, JavaScript, React.js, Next.js, Tailwind CSS
 
 - **Backend:**  Node.js, Next.js
 
