@@ -6,11 +6,11 @@ const Home = () => {
       <h1 className="head_text text-center">
         Discover and Share
         <br className="" />
-        <span className="orange_gradient text-center">
-          AI-Powered Diet Plans
-        </span>
+        <span className="orange_gradient text-center">AI-Powered Recipes</span>
       </h1>
-      <p>MealMentor is an open source AI prompting tool for modern world</p>
+      <p>
+        MealMentor is an AI assisted meal plannning program for modern world
+      </p>
       <Feed />
     </section>
   );
