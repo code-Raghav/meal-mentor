@@ -42,10 +42,10 @@ To get started with MealMentor, please follow these steps:
   MONGODB_URI = yourmongodbconnectid
   NEXTAUTH_URL=http://localhost:3000
   NEXTAUTH_URL_INTERNAL=http://localhost:3000
-  NEXTAUTH_SECRET=randomlygenerated(use, openssl rand -base64 32)
+  NEXTAUTH_SECRET=randomlygenerated(at https://www.cryptool.org/en/cto/openssl type, openssl rand -base64 32)
 5. Start the application: 
    ```bash
-   npm start   
+   npm run dev  
 6. Access MealMentor:
   Open your web browser and visit http://localhost:3000 to access the MealMentor website.
   
