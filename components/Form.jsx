@@ -29,8 +29,7 @@ const Form = ({ type, setPost, post, submitting, handleSubmit }) => {
           <textarea
             value={post?.tag}
             onChange={(e) => setPost({ ...post, tag: e.target.value })}
-            placeholder="Write your recipe here..."
-            required
+            placeholder="Write your recipe here...(Leave empty if you want AI to automatically generate the recipe)"
             className="form_textarea"
           />
         </label>

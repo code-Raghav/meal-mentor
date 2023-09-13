@@ -18,17 +18,38 @@ const CreatePrompt = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("/api/prompt/new", {
-        method: "POST",
-        body: JSON.stringify({
-          prompt: post.prompt,
-          userId: session?.user.id,
-          tag: post.tag,
-        }),
-      });
+      if (!post.tag) {
+        const tag = await fetch("/api/recipe", {
+          method: "POST",
+          body: JSON.stringify({
+            prompt: post.prompt,
+          }),
+        });
 
-      if (response.ok) {
-        router.push("/");
+        const recipe = await tag.text();
+        const response = await fetch("/api/prompt/new", {
+          method: "POST",
+          body: JSON.stringify({
+            prompt: post.prompt,
+            userId: session?.user.id,
+            tag: recipe,
+          }),
+        });
+        if (response.ok) {
+          router.push("/");
+        }
+      } else {
+        const response = await fetch("/api/prompt/new", {
+          method: "POST",
+          body: JSON.stringify({
+            prompt: post.prompt,
+            userId: session?.user.id,
+            tag: post.tag,
+          }),
+        });
+        if (response.ok) {
+          router.push("/");
+        }
       }
     } catch (error) {
       console.log(error);
